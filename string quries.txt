@@ -1,0 +1,23 @@
+Reverse()- Reverse the string
+select Last_name,reverse(Last_name) Reversed_name from employees
+
+Right()- Select the string right to left
+select Last_name,right(Last_name,1) letters from employees
+
+left()- Select the string left to right
+select Last_name,left(Last_name,1) letters from employees
+
+strcmp()- compare the values between two
+	if a=b; 0
+	   a>b; 1 
+	   a<b;-1
+select strcmp(max(salary),min(salary)) from employees
+
+substr()
+select last_name,ucase(substr(last_name,1,4) from employees where department_id=50
+
+ltrim()- removes the unwanted space in the left side
+select ltrim('       suresh raina     ')
+
+rtrim()- removes the unwanted space in the right side
+select rtrim('       suresh raina     ')
