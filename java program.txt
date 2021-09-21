@@ -1,0 +1,204 @@
+// to find no. of days in given month number
+    System.out.println("enter the month number:");
+     int mno = sc.nextInt();
+     String msg = tofinddays(mno);
+    System.out.println("the month no.  "+mno+"  "+msg);
+}
+
+public static String tofinddays(int mno)
+{     String msg="";
+      switch(mno) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+              msg = "has 31 days";
+              break;
+          case 2:
+              msg = "has 28 or 29 days";
+              break;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+              msg = " has 30 days";
+              break;
+          default:
+              msg = "invalid month no.";
+      }
+        return msg;
+      }
+
+
+---------------------------------------------------------------------------------------------------
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the no. of elements:");
+int n = sc.nextInt();
+int[] arr = new int[n];
+int sum=0;
+System.out.println("enter the array elements:");
+for (int i=0;i<arr.length;i++)
+{
+    arr[i] = sc.nextInt();
+    sum+=arr[i];
+}
+
+System.out.println("printing the elements in the array");
+for (int i=0;i<arr.length;i++)
+{
+    System.out.print(arr[i]+"    ");
+}
+System.out.println();
+System.out.println("the sum of elements in array: "+sum );
+
+-------------------------------------------------------------------------------------------------------------------------------
+Bubble sort
+
+package com.torryharris;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+   // read an arry : how elements in the arry
+        int len = Integer.parseInt(args[0]);
+        // declaration of array
+        int[] iarr = new int[len];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the element of the array");
+        for (int i=0;i<iarr.length;i++)
+        {
+            iarr[i]=sc.nextInt();
+        }
+
+        // for sorting the array
+        // length ---> 5  i<5-1 = 4    i=0,1,2,3
+        for (int i=0;i<(iarr.length-1);i++)  // is used for passes : 0,1,2,3
+        {
+            for (int j=0;j<(iarr.length-i-1);j++) // comparision: 0,1,2,3 ,  0,1,2 , 0,1 ,0
+            {
+                if (iarr[j]>iarr[j+1])    // (0,1),(1,2),(2,3),(3,4),  (0,1),(1,2),(2,3), (0,1)(1,2),(0,1)
+                {
+                    int temp = iarr[j];
+                    iarr[j] = iarr[j+1];
+                    iarr[j+1]=temp;
+                }
+            }
+        }
+
+        // to print the sorted array
+        System.out.println("Printing the elements of the array");
+        for (int i=0;i<iarr.length;i++)
+        {
+            System.out.print(iarr[i]+"   ");
+        }
+        System.out.println();
+    }
+}
+
+----------------------------------------------------------------------------------------
+OOPs Encapsulation
+Class:
+
+package com.torryharris;
+
+public class Student {
+    private int regno;
+    private String name;
+    private int sub1;
+    private int sub2;
+    private int sub3;
+
+    public Student(int regno, String name, int sub1, int sub2, int sub3) {
+        this.regno = regno;
+        this.name = name;
+        this.sub1 = sub1;
+        this.sub2 = sub2;
+        this.sub3 = sub3;
+    }
+    private double calc_percentage()
+    {
+        return ((sub1 + sub2 + sub3)/3);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "regno=" + regno +
+                ", name='" + name + '\'' +
+                ", sub1=" + sub1 +
+                ", sub2=" + sub2 +
+                ", sub3=" + sub3 +
+                ", calc_percentage=" + calc_percentage() +
+                '}';
+    }
+}
+
+
+main program:
+package com.torryharris;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the regno, name, marks of the students");
+
+        int regno = sc.nextInt();
+        String name = sc.next();
+        int sub1 = sc.nextInt();
+        int sub2 = sc.nextInt();
+        int sub3 = sc.nextInt();
+        Student S1 = new Student(regno,name,sub1,sub2,sub3);
+        System.out.println(S1);
+//
+
+//        Student S1 = new Student(10942, "vicky", 89, 100, 90);
+//        System.out.print(S1);
+//        Student S2 = new Student(77, "bhuvan", 98, 56, 89);
+//        System.out.println("\n" + S2);
+
+    }
+}
+------------------------------------------------------------------------------
+TNEB
+Class:
+
+package com.torryharris;
+
+public class Customer {
+    private int custId;
+    private String custName;
+    private int unitsConsumed;
+    private int unitPrice;
+
+    public Customer() {
+        this.custId = custId;
+        this.custName = custName;
+        this.unitsConsumed = unitsConsumed;
+        this.unitPrice = unitPrice;
+    }
+    public int calc_billamt()
+    {
+        return(unitsConsumed*unitPrice);
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "custId=" + custId +
+                ", custName='" + custName + '\'' +
+                ", unitsConsumed=" + unitsConsumed +
+                ", unitPrice=" + unitPrice +
+                '}';
+    }
+}
+
+
+
+
+
