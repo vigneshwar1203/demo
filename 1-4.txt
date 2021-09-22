@@ -1,0 +1,103 @@
+//Vigneshwar and Charran
+
+
+package com.torryharris.mainpack;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        /*int coe=1,rows = 6;
+        for(int i = 0; i < rows; i++) {
+            for(int space = 1; space < rows - i; ++space) {
+                System.out.print("  ");
+            }
+
+            for(int j = 0; j <= i; j++) {
+                if (j == 0 || i == 0)
+                    coe = 1;
+                else
+                    coe = coe * (i - j + 1) / j;
+
+                System.out.printf("%4d", coe);
+            }
+            System.out.println();
+        }
+
+------------------------------------------------------------------------------------------------------------------------------------------
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the two numbers ");
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        int gcd=1,lcm;
+        for (int i=1; i<=n1 && i<=n2; i++)
+        {
+            if( n1%i == 0 && n2%i == 0)
+                gcd = i;
+        }
+        lcm = (n1*n2)/n1;
+        System.out.println("gcd of "+n1+","+n2+" is "+gcd);
+        System.out.println("lcm of "+n1+","+n2+"  is "+lcm);
+        int mark=40;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+        switch (mark/10){
+            case 10:
+            case 9:
+                System.out.println("A");
+                break;
+            case 8:
+                System.out.println("B");
+                break;
+            case 7:
+                System.out.println("C");
+                break;
+            case 6:
+                System.out.println("D");
+                break;
+            case 5:
+                System.out.println("E");
+                break;
+            case 4:
+                System.out.println("Fail");
+                break;
+            default:
+                System.out.println("invalid garde");
+                break;
+        }
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+            int n, remainder = 1, number, sum = 0;
+
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter a number you want to check: ");
+
+            n = sc.nextInt();
+            number = n;
+
+            while (number > 9)              
+            {
+
+                while (number > 0)
+                {
+
+                    remainder = number % 10;
+                    sum = sum + remainder;
+
+                    number = number / 10;
+                }
+                number = sum;
+                sum = 0;
+            }
+            if (number == 1)
+            {
+                System.out.println("The given number is a magic number.");
+            }
+            else
+            {
+                System.out.println("The given number is not a magic number.");
+            }
+        }
+}
+------------------------------------------------------------------------
